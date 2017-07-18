@@ -1,0 +1,65 @@
+{
+    "parser": "babel-eslint",
+    "plugins": [],
+    "parserOptions": {},
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "rules": {
+        "no-console": 0,
+        "react/sort-comp" : 2,
+        "react/jsx-no-literals": 0,
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/forbid-component-props": 0, //Disabled rule because we need to set classNames on react-bootstrap components
+        "react/no-multi-comp": [1, { "ignoreStateless": true }],
+        "react/forbid-prop-types": 0,
+        "react/style-prop-object": 0, //Disabled rule because react-intl components need style attribute to set currency/percentage etc
+        "react/no-set-state": 0,
+        "react/sort-prop-types": [1, {
+            "ignoreCase": true
+        }],
+        "react/no-did-mount-set-state": 1,
+        "react/jsx-no-bind": [1, {
+            "ignoreRefs": true,
+            "allowArrowFunctions": false,
+        }],
+        "react/require-optimization": 0,
+        "react/require-default-props": 0,
+        "react/no-unused-prop-types": 1,
+        "indent": ["error", 2],
+        "require-jsdoc": 0,
+        "new-cap": 0,
+        "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+        "no-mixed-spaces-and-tabs": "error",
+        "no-multi-spaces": "error",
+        "key-spacing": ["error", { "afterColon": true }],
+        "no-tabs": "error",
+        "curly": "error",
+        "brace-style": "error",
+        "padded-blocks": ["error", "never"],
+        "keyword-spacing": ["error", { "after": true }],
+        "object-curly-newline": ["error", {
+            "ObjectExpression": { "multiline": true },
+            "ObjectPattern": { "multiline": true }
+        }],
+        "object-property-newline": "error",
+        "max-len": ["error", 320],
+        "no-undef": "error",
+        "quote-props": ["error", "consistent-as-needed"]
+    },
+    "extends": [
+      "eslint:recommended",
+      "google",
+      "plugin:react/all"
+    ],
+    "env": {
+        "shared-node-browser": false,
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "globals": {
+          "__PUBLIC_PATH__": true,
+          "__CONFIG__": true
+      }
+}
